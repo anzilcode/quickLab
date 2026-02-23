@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body onload="checkNUm()"></body>
+
+<script>
+function checkNUm(){
+  let a = parseFloat(prompt("Enter side1:"))
+  let b = parseFloat(prompt("Enter side2:"))
+  let c = parseFloat(prompt("Enter side3:"))
+	
+  if(a+b > c && b+c > a && a+c > b){
+
+    let s = (a+b+c)/2;
+    let area = Math.sqrt(s * (s-a)*(s-b)*(s-c));
+	
+    if(a==b && b==c){
+      alert("Equilateral Triangle and area:"+ area)
+    }
+    else if(a==b || b==c || a==c){
+      alert("Isosceles Triangle and area" + area)
+    }
+    else{
+      alert("Scalene Triangle and area:" + area)
+    }
+  }
+  else{
+    alert("Not a Triangle ")
+  }
+}
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Country and Capital</title> 
+<script>
+function findCapital(){
+ let Selectedcapital = document.countryForm.country.value; 
+ document.countryForm.capital.value = Selectedcapital
+}
+</script>
+<body>
+<form name="countryForm">
+<select name="country" onChange="findCapital()">
+	<option value="">Select</option>
+	<option value="Delhi">India</option>
+	<option value="Bsalilia">Brazil</option>
+	<option value="Karachi">Pakistan</option>
+	<option value="France">Paris</option>
+</select>
+<label>Capital:</label>
+<input type="text" value="" name="capital">
+</form>
+</body> 
+</html>

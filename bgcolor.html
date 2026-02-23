@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<button id="changeBG">Change Bg</button>
+</body>
+<script>
+let changeBg = document.getElementById('changeBG')
+let color = ['red','blue','yellow','green']
+
+changeBg.addEventListener('click',()=>{
+  let rand = Math.floor(Math.random() * color.length)
+console.log(rand)
+  document.body.style.backgroundColor = color[rand]
+})
+</script>
+</html>
